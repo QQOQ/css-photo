@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html style="font-size: 250px;">
+<head>
+	<title>css自画像</title>
+</head>
+<body>
+	<div class="main">
+		<div id="head">
+			<div class="head1"></div>
+			<div class="head2"></div>
+			<div class="head2_1"></div>
+			<div class="head3"></div>
+			<div class="head3_1"></div>
+			<div class="head4"></div>
+		</div>
+		<div id="ear">
+			<div class="ear_left"></div>
+			<div class="ear_right"></div>
+		</div>
+		<div id="eyebrows">
+			<div class="eyebrows_left">
+				<div class="eyebrows_left_1"></div>
+				<div class="eyebrows_left_2"></div>
+			</div>
+			<div class="eyebrows_right">
+				<div class="eyebrows_left_1"></div>
+				<div class="eyebrows_left_2"></div>
+			</div>
+		</div>
+		<div id="eye">
+			<div class="eye_left">
+				<div class="eye_1"></div>
+				<div class="eye_2"></div>
+				<div class="eyeball"></div>
+			</div>
+			<div class="eye_right">
+				<div class="eye_1"></div>
+				<div class="eye_2"></div>
+				<div class="eyeball"></div>
+			</div>
+		</div>
+		<div id="nose">
+			<div class="nose_1"></div>
+			<div class="nose_2"></div>
+			<div class="nose_3"></div>
+		</div>
+		<div id="mouth">
+			<div class="mouth_1"></div>
+			<div class="mouth_2"></div>
+			<div class="mouth_3"></div>
+		</div>
+	</div>
+	<style type="text/css">
+		:root{
+			--border-width: .03rem; /* 定义线条大小 */
+			--border-color: #333333; /* 定义线条颜色 */
+			--fill-color: #ffeee8; /* 定义填充颜色(肤色) */
+		}
+		.main{
+			position: relative;
+		}
+		.main > div{
+			position: absolute;
+		}
+		/* 头部轮廓 */
+		#head{
+			z-index: 1;
+		}
+		.head1{
+			position: absolute;
+		    width: 1.8rem;
+		    height: 2.0rem;
+		    border: var(--border-width) solid var(--border-color);
+		    border-bottom: none;
+		    left: 2.08rem;
+		    top: .45rem;
+		    transform: skewY(2deg) skewX(-2deg);
+		    border-radius: 100%;
+		    background: var(--fill-color);
+		    z-index: 1;
+		}
+		.head2{
+			position: absolute;
+		    width: .48rem;
+		    height: 1.6rem;
+		    border: var(--border-width) solid var(--border-color);
+		    border-top: none;
+		    left: 2.25rem;
+		    top: 1.3rem;
+		    transform: rotate(-15deg) skew(10deg, -7deg);
+		    border-bottom: none;
+		    border-right: none;
+		    border-radius: 100%;
+		    background: var(--fill-color);
+		}
+		.head2_1{
+			position: absolute;
+		    width: .58rem;
+		    height: 1.6rem;
+		    border-top: none;
+		    left: 2.27rem;
+		    top: 1.27rem;
+		    transform: rotate(-15deg) skew(10deg, -12deg);
+		    border-bottom: none;
+		    border-right: none;
+		    border-radius: 100%;
+		    background: var(--fill-color);
+		    z-index: 2;
+		}
+		.head3{
+			position: absolute;
+		    width: .4rem;
+		    height: 1.5rem;
+		    border: var(--border-width) solid var(--border-color);
+		    border-top: none;
+		    left: 3.29rem;
+		    top: 1.38rem;
+		    transform: rotate(38deg) skewX(9deg) rotateY(180deg);
+		    border-bottom: none;
+		    border-right: none;
+		    border-radius: 100%;
+		    background: var(--fill-color);
+		}
+		.head3_1{
+			position: absolute;
+		    width: .58rem;
+		    height: 1.6rem;
+		    border-top: none;
+		    left: 3.127rem;
+		    top: 1.3rem;
+		    transform: rotate(38deg) skew(8deg, 4deg) rotateY(180deg);
+		    border-bottom: none;
+		    border-right: none;
+		    border-radius: 100%;
+		    background: var(--fill-color);
+		    z-index: 2;
+		}
+		.head4{
+			position: absolute;
+		    width: 1.1rem;
+		    height: 1.5rem;
+		    border: var(--border-width) solid var(--border-color);
+		    left: 2.42rem;
+		    top: 1.35rem;
+		    border-radius: 100%;
+		    transform: rotate(3deg) skewX(-1deg);
+		    background: var(--fill-color);
+		    border-top: none;
+		}
+		/* 耳朵 */
+		.ear_left{
+			width: .3rem;
+		    height: .52rem;
+		    border: var(--border-width) solid var(--border-color);
+		    left: 2rem;
+		    position: absolute;
+		    top: 1.58rem;
+		    border-radius: 1rem 0 0 1rem;
+		    transform: skewY(36deg);
+		    background: var(--fill-color);
+		}
+		.ear_left:after{
+			content: '';
+		    width: .08rem;
+		    height: .1rem;
+		    border: var(--border-width) solid var(--border-color);
+		    position: absolute;
+		    transform: skew(-19deg,-25deg);
+		    top: .16rem;
+		    border-right: none;
+		    border-bottom: none;
+		    border-radius: 1rem;
+		    left: .02rem;
+		}
+		.ear_left:before{
+			content: '';
+		    width: .08rem;
+		    height: .45rem;
+		    border: var(--border-width) solid var(--border-color);
+		    position: absolute;
+		    top: .025rem;
+		    left: .06rem;
+		    border-right: none;
+		    border-bottom: none;
+		    transform: skew(-27deg,-40deg) rotate(-34deg);
+		    border-radius: 100%;
+		    border-top: none;
+		}
+		.ear_right{
+			width: .3rem;
+		    height: .52rem;
+		    border: var(--border-width) solid var(--border-color);
+		    left: 3.63rem;
+		    position: absolute;
+		    top: 1.63rem;
+		    border-radius: 0 1rem 1rem 0;
+		    transform: skewY(-28deg) rotate(25deg);
+		    background: var(--fill-color);
+		}
+		.ear_right:after{
+			content: '';
+		    width: .08rem;
+		    height: .1rem;
+		    border: var(--border-width) solid var(--border-color);
+		    position: absolute;
+		    transform: skew(41deg,-18deg);
+		    top: .1rem;
+		    border-left: none;
+		    border-bottom: none;
+		    border-radius: 1rem;
+		    left: .13rem;
+		}
+		.ear_right:before{
+			content: '';
+		    width: .09rem;
+		    height: .35rem;
+		    border: var(--border-width) solid var(--border-color);
+		    position: absolute;
+		    top: .076rem;
+		    left: .11rem;
+		    border-left: none;
+		    border-bottom: none;
+		    transform: skew(-26deg,-31deg) rotate(-27deg);
+		    border-radius: 100%;
+		    border-top: none;
+		}
+		/* 眼眉 */
+		#eyebrows{
+			z-index: 2;
+		}
+		.eyebrows_left{
+			position: absolute;
+			left: 2.33rem;
+		    top: 1.25rem;
+		}
+		.eyebrows_left_1{
+			position: absolute;
+		    left: .02rem;
+		    border: .176rem solid var(--border-color);
+		    border-bottom: none;
+		    border-right: none;
+		    width: .05rem;
+		    border-radius: 1rem 2rem 0 .3rem;
+		    transform: rotate(0deg) skew(-19deg, -15deg);
+		    top: .089rem;
+		}
+		.eyebrows_left_2{
+			position: absolute;
+		    left: .07rem;
+		    width: .45rem;
+		    height: .2rem;
+		    box-shadow: inset 0rem .14rem 0 var(--border-color);
+		    border-radius: 100%;
+		    transform: rotate(11deg) skewX(19deg);
+		    top: .11rem;
+		}
+		.eyebrows_right{
+			position: absolute;
+			left: 3.66rem;
+			top: 1.25rem;
+			transform: rotateY(180deg);
+		}
+		/* 眼睛 */
+		#eye{
+			z-index: 2;
+		}
+		.eye_left{
+			position: absolute;
+			left: 2.42rem;
+    		top: 1.6rem;
+		}
+		.eye_left .eye_1{
+		    width: .3rem;
+		    height: .11rem;
+		    border: .02rem solid var(--border-color);
+		    top: 0rem;
+		    position: absolute;
+		    border-top: none;
+		    border-radius: 100%;
+		    left: .036rem;
+		    border-left: none;
+		    transform: rotate(6deg) skew(-3deg);
+		    top: .01rem;
+		}
+		.eye_left .eye_2{
+			width: .32rem;
+		    height: .18rem;
+		    border: .02rem solid var(--border-color);
+		    top: 0rem;
+		    position: absolute;
+		    border-right: none;
+		    border-bottom: none;
+		    border-radius: 100%;
+		    left: .04rem;
+		    border-left: none;
+		    transform: rotate(6deg);
+		    box-shadow: 0 -0.02rem 0 0 var(--fill-color);
+    		z-index: 1;
+		}
+		/* 眼球 */
+		.eyeball{
+			position: absolute;
+		    width: .13rem;
+		    height: .13rem;
+		    border-radius: 50%;
+		    background: var(--border-color);
+		    left: .155rem;
+		    top: -.01rem;
+		}
+		.eyeball:after{
+			position: absolute;
+		    width: .02rem;
+		    height: .02rem;
+		    background: rgba(255,255,255,.7);
+		    border-radius: 50%;
+		    content: '';
+		    left: 50%;
+		    top: 50%;
+		    margin-top: -.01rem;
+		    margin-left: -.01rem;
+		    box-shadow: 0 0 0.03rem 0.01rem var(--fill-color);
+		    opacity: .5;
+		}
+		.eye_right{
+			position: absolute;
+			left: 3.2rem;
+			top: 1.6rem;
+		}
+		.eye_right .eye_2{
+			width: .32rem;
+		    height: .25rem;
+		    border: .02rem solid var(--border-color);
+		    top: .01rem;
+		    position: absolute;
+		    border-right: none;
+		    border-bottom: none;
+		    border-radius: 100%;
+		    left: 0.02rem;
+		    border-left: none;
+		    transform: rotate(-7deg) skewX(-3deg);
+		    z-index: 1;
+		    box-shadow: 0 -0.03rem 0 0 var(--fill-color);
+		}
+		.eye_right .eye_1{
+		    width: .3rem;
+		    height: .11rem;
+		    border: .02rem solid var(--border-color);
+		    top: 0rem;
+		    position: absolute;
+		    border-top: none;
+		    border-radius: 100%;
+		    left: .036rem;
+		    border-left: none;
+		    transform: rotate(-9deg) skew(0);
+		    top: .01rem;
+		    border-right: none;
+		}
+		.eye_right .eyeball{
+			left: .1rem;
+		}
+
+		/* 鼻子 */
+		#nose{
+			z-index: 2;
+		}
+		.nose_1{
+			position: absolute;
+		    left: 2.73rem;
+		    top: 2rem;
+		    border: var(--border-width) solid var(--border-color);
+		    border-bottom: none;
+		    border-top: none;
+		    border-right: none;
+		    height: .2rem;
+		    width: .22rem;
+		    border-radius: 100%;
+		    transform: rotate(-10deg) skew(1deg, 5deg);
+		}
+		.nose_2{
+			position: absolute;
+		    left: 2.98rem;
+		    top: 2.01rem;
+		    border: var(--border-width) solid var(--border-color);
+		    border-bottom: none;
+		    border-top: none;
+		    border-left: none;
+		    height: .19rem;
+		    width: .22rem;
+		    border-radius: 100%;
+		    transform: rotate(-18deg) skew(-21deg, 12deg);
+		}
+		.nose_3{
+			position: absolute;
+		    left: 2.88rem;
+		    top: 2.08rem;
+		    border: .02rem solid var(--border-color);
+		    width: .2rem;
+		    border-top: none;
+		    border-left: none;
+		    border-right: none;
+		    border-radius: 100%;
+		    height: .1rem;
+		}
+		.nose_3:after{
+			content: '';
+		    position: absolute;
+		    height: .1rem;
+		    width: .08rem;
+		    border-radius: 100%;
+		    border: .02rem solid var(--border-color);
+		    border-left: none;
+		    border-right: none;
+		    border-bottom: none;
+		    top: .035rem;
+		    left: .18rem;
+		    transform: skew(-19deg, -17deg);
+		}
+		.nose_3:before{
+			content: '';
+		    position: absolute;
+		    height: .1rem;
+		    width: .08rem;
+		    border-radius: 100%;
+		    border: .02rem solid var(--border-color);
+		    border-left: none;
+		    border-right: none;
+		    border-bottom: none;
+		    top: .035rem;
+		    left: -.06rem;
+		    transform: skew(22deg, 9deg);
+		}
+
+		/* 嘴巴 */
+		#mouth{
+			z-index: 2;
+		}
+		.mouth_1{
+			position: absolute;
+		    width: .05rem;
+		    height: .05rem;
+		    border: var(--border-width) solid var(--border-color);
+		    left: 2.94rem;
+		    top: 2.344rem;
+		    border-right: none;
+		    border-top: none;
+		    transform: rotate( -59deg) skew(6deg, 30deg);
+		    z-index: 1;
+		    background: var(--fill-color);
+		}
+		.mouth_2{
+			position: absolute;
+		    border: var(--border-width) solid var(--border-color);
+		    width: .53rem;
+		    border-right: none;
+		    border-left: none;
+		    border-bottom: none;
+		    left: 2.71rem;
+		    top: 2.37rem;
+		    border-radius: 100%;
+		    height: .1rem;
+		}
+		.mouth_2:after{
+			position: absolute;
+		    content: '';
+		    width: .15rem;
+		    height: .03rem;
+		    box-shadow: 0 .01rem 0 var(--border-color);
+		    top: 0;
+		    left: .19rem;
+		    border-radius: 100%;
+		    background: var(--fill-color);
+		}
+		.mouth_2:before{
+			content: '';
+		    position: absolute;
+		    border: .01rem solid var(--border-color);
+		    width: .5rem;
+		    border-right: none;
+		    border-left: none;
+		    border-bottom: none;
+		    border-radius: 100%;
+		    top: .02rem;
+		    height: .03rem;
+		    left: .015rem;
+		}
+		.mouth_3{
+			position: absolute;
+		    border: .02rem solid var(--border-color);
+		    width: .42rem;
+		    border-right: none;
+		    border-left: none;
+		    border-top: none;
+		    left: 2.76rem;
+		    top: 2.415rem;
+		    border-radius: 100%;
+		    height: .09rem;
+		}
+	</style>
+</body>
+</html>
